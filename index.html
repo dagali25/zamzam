@@ -286,12 +286,94 @@
             font-size: 180px;
             color: var(--secondary);
             box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* Vending Machines Section */
+        .vending {
+            padding: 100px 0;
+            background: var(--white);
+        }
+        
+        .vending-content {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+        
+        .vending-text {
+            flex: 1;
+        }
+        
+        .vending-text p {
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .vending-image {
+            flex: 1;
+            background: var(--light);
+            height: 400px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 180px;
+            color: var(--secondary);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+        
+        .vending-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .benefit-card {
+            background: var(--light);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .benefit-icon {
+            font-size: 50px;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+        
+        .benefit-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.4rem;
         }
         
         /* Products section */
         .products {
             padding: 100px 0;
-            background: var(--white);
+            background: var(--light);
         }
         
         .product-grid {
@@ -348,7 +430,7 @@
         /* Testimonials */
         .testimonials {
             padding: 100px 0;
-            background: var(--light);
+            background: var(--white);
         }
         
         .testimonial-grid {
@@ -358,7 +440,7 @@
         }
         
         .testimonial-card {
-            background: var(--white);
+            background: var(--light);
             padding: 40px;
             border-radius: 10px;
             box-shadow: var(--shadow);
@@ -414,7 +496,7 @@
         /* Contact section */
         .contact {
             padding: 100px 0;
-            background: var(--white);
+            background: var(--light);
         }
         
         .contact-grid {
@@ -424,7 +506,7 @@
         }
         
         .contact-info {
-            background: var(--light);
+            background: var(--white);
             padding: 40px;
             border-radius: 10px;
             box-shadow: var(--shadow);
@@ -455,7 +537,7 @@
         }
         
         .contact-form {
-            background: var(--light);
+            background: var(--white);
             padding: 40px;
             border-radius: 10px;
             box-shadow: var(--shadow);
@@ -625,12 +707,12 @@
         
         /* Responsive design */
         @media (max-width: 992px) {
-            .about-content {
+            .about-content, .vending-content {
                 flex-direction: column;
                 gap: 40px;
             }
             
-            .about-image {
+            .about-image, .vending-image {
                 width: 100%;
                 height: 350px;
             }
@@ -676,7 +758,7 @@
                 margin-left: 0;
             }
             
-            .about-image {
+            .about-image, .vending-image {
                 height: 280px;
                 font-size: 120px;
             }
@@ -728,6 +810,7 @@
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
+                    <li><a href="#vending">Vending Machines</a></li>
                     <li><a href="#products">Products</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -770,7 +853,58 @@
                     <a href="#contact" class="btn">Get in Touch</a>
                 </div>
                 <div class="about-image">
-                    <i class="fas fa-mortar-pestle"></i>
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 400'><rect width='800' height='400' fill='%23e0f7fa'/><circle cx='400' cy='200' r='100' fill='%2300a8cc' opacity='0.2'/><path d='M300,200 L500,200 M400,100 L400,300' stroke='%2300a8cc' stroke-width='10'/><text x='400' y='350' font-family='Arial' font-size='20' fill='%2300a8cc' text-anchor='middle'>ZamZam Water</text></svg>" alt="ZamZam Water">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vending Machines Section -->
+    <section class="vending" id="vending">
+        <div class="container">
+            <div class="section-title">
+                <h2>ZamZam Vending Machines</h2>
+                <p>The first ZamZam water vending machines throughout the UK</p>
+            </div>
+            <div class="vending-content">
+                <div class="vending-text">
+                    <p>We are proud to introduce the UK's first ZamZam water vending machines, strategically located to serve businesses, mosques, community centers, and catering facilities across the country.</p>
+                    <p>Our state-of-the-art vending machines provide easy access to pure ZamZam water 24/7, ensuring that everyone can benefit from this blessed water whenever they need it.</p>
+                    <p>Whether you're a restaurant owner looking to offer authentic ZamZam water to your customers or a community center seeking to provide this service to visitors, our vending machines are the perfect solution.</p>
+                    <a href="#contact" class="btn">Inquire About Vending Machines</a>
+                </div>
+                <div class="vending-image">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 400'><rect width='800' height='400' fill='%23e0f7fa'/><rect x='250' y='100' width='300' height='250' rx='10' fill='%23ffffff' stroke='%2300a8cc' stroke-width='5'/><rect x='300' y='150' width='80' height='150' rx='5' fill='%2300a8cc' opacity='0.5'/><rect x='400' y='150' width='80' height='150' rx='5' fill='%2300a8cc' opacity='0.5'/><rect x='500' y='150' width='80' height='150' rx='5' fill='%2300a8cc' opacity='0.5'/><circle cx='320' cy='320' r='15' fill='%2300a8cc'/><circle cx='400' cy='320' r='15' fill='%2300a8cc'/><circle cx='480' cy='320' r='15' fill='%2300a8cc'/><text x='400' y='80' font-family='Arial' font-size='24' fill='%2300a8cc' text-anchor='middle'>ZamZam Vending Machine</text></svg>" alt="ZamZam Vending Machine">
+                </div>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>24/7 Availability</h3>
+                    <p>Access pure ZamZam water anytime, day or night</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Nationwide Coverage</h3>
+                    <p>Machines located strategically across the UK</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h3>Pure Water</h3>
+                    <p>Authentic ZamZam water with guaranteed purity</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Business Solutions</h3>
+                    <p>Perfect for restaurants and catering businesses</p>
                 </div>
             </div>
         </div>
@@ -932,7 +1066,7 @@
                             <select id="subject" required>
                                 <option value="">Select a subject</option>
                                 <option value="order">Place an Order</option>
-                                <option value="query">General Query</option>
+                                <option value="vending">Vending Machine Inquiry</option>
                                 <option value="wholesale">Wholesale Inquiry</option>
                                 <option value="other">Other</option>
                             </select>
@@ -967,8 +1101,8 @@
                     <ul class="footer-links">
                         <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
                         <li><a href="#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="#vending"><i class="fas fa-chevron-right"></i> Vending Machines</a></li>
                         <li><a href="#products"><i class="fas fa-chevron-right"></i> Products</a></li>
-                        <li><a href="#testimonials"><i class="fas fa-chevron-right"></i> Testimonials</a></li>
                         <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
                     </ul>
                 </div>
@@ -979,7 +1113,7 @@
                         <li><a href="#"><i class="fas fa-chevron-right"></i> Family Size (2L)</a></li>
                         <li><a href="#"><i class="fas fa-chevron-right"></i> Bulk Containers (5L)</a></li>
                         <li><a href="#"><i class="fas fa-chevron-right"></i> Bulk Containers (10L)</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Special Packages</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Vending Machines</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
